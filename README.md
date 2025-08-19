@@ -24,11 +24,11 @@ Challenges for Team Ireland ECSC Qualifiers 2025.
 | smoked signatures    | hash collisions    | @Blankamber|
 | Proofing    | n/a    | @Pseudoleon|
 | box | diffie hellman small subgroups    | @AlphaChaos|
-| Crypto Challenge 4    | n/a    | @suvoni       |
+| Hades    | n/a    | @Pseudoleon       |
 | **--- Forensics ---** |           |        |
 | Hell's Gate | memory, malware, shellcode | @0x157 |
-| Forensics Challenge 2 | n/a | @miasto|
-| Forensics Challenge 3 | n/a | @cmake, @EkrUp |
+| MarksMisclickMisadvtenture | n/a | @miasto|
+| Brat | n/a | @cmake, @EkrUp |
 | Mad Hatter's Whispers | pcap, custom protocol | @korki |
 | **--- Misc ---**      |           |        |
 | pipeline      | gitea, docker escape      | @m0z   |
