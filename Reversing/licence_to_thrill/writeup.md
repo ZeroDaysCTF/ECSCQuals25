@@ -1,0 +1,3 @@
+# solution
+
+So, this is a Windows PE file, some dynamic function loading and xor. Ideally, students could grab the xor strings maybe with brxor.py, but it will point them to a registry key the code will create. The first 4 characters the user inputs as a command line arg (e.g <bin> abcd) will be checked for correctness. The player needs to examine this check carefully as these 4 chars are used as a key. If the player runs strings, they'll notice 'SystemFunction032', an RC4 function that is undocumented. The correct input is the RC4 key. The RC4 key will decrypt if the key is correct. This is trivial in Angr, but shouldn't pose too much of a challenge to many rev players even if they don't use it

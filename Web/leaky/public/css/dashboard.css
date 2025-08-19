@@ -1,0 +1,162 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: #333;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.logout {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+}
+
+.clear-button {
+    padding: 10px 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: auto;
+}
+
+.add-todo-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #e7f3ff;
+    border-radius: 8px;
+}
+
+.add-button {
+    padding: 12px 24px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+}
+
+.todo-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: white;
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.todo-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.todo-date {
+    color: #666;
+    font-size: 14px;
+}
+
+.todo-content {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-button {
+    padding: 8px 16px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+}
+
+.search-results {
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #bbdefb;
+}
+
+.no-todos {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+    font-style: italic;
+} 

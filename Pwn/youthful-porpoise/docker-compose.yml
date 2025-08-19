@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  youthful_porpoise:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - "5004:5000"

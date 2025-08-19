@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report URL - Leaky TODO App</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/report.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Report URL to Admin</h1>
+        <div class="nav-links">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <% if (typeof message !== 'undefined' && message) { %>
+            <div class="message success"><%= message %></div>
+        <% } %>
+
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="message error"><%= error %></div>
+        <% } %>
+
+        <div class="info">
+            <strong>How it works:</strong> Submit a URL and our admin bot will visit it in a browser session. 
+            This is useful for reporting security issues or testing functionality.
+        </div>
+
+        <form method="POST" action="/report">
+            <div class="form-group">
+                <label for="url">URL to Report:</label>
+                <input type="url" id="url" name="url" 
+                       placeholder="https://example.com" 
+                       required>
+            </div>
+            
+            <button type="submit">Submit Report</button>
+        </form>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,22 @@
+# Docker volumes (now managed by Docker)
+# gitea/
+postgres/
+# workspace/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Leaky TODO App</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome, <%= username %>!</h1>
+        <div class="nav-links">
+            <a href="/report">Report URL</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="error"><%= error %></div>
+        <% } %>
+
+        <% if (typeof searchTerm !== 'undefined' && searchTerm) { %>
+            <div class="search-results">Search results for "<%= searchTerm %>"</div>
+        <% } %>
+
+        <div class="search-section">
+            <h3>Search Todos</h3>
+            <form method="GET" action="/dashboard" class="search-form">
+                <input type="text" name="s" value="<%= typeof searchTerm !== 'undefined' ? searchTerm : '' %>" 
+                       placeholder="Search todos..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+                <a href="/dashboard" class="clear-button">Clear</a>
+            </form>
+        </div>
+
+        <div class="add-todo-section">
+            <h3>Add New Todo</h3>
+            <form method="POST" action="/add-todo">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" placeholder="Enter todo details..."></textarea>
+                </div>
+                
+                <button type="submit" class="add-button">Add Todo</button>
+            </form>
+        </div>
+
+        <div class="todos-section">
+            <h3>Your Todos</h3>
+            
+            <% if (todos.length === 0) { %>
+                <div class="no-todos">
+                    <% if (typeof searchTerm !== 'undefined' && searchTerm) { %>
+                        No todos found matching "<%- searchTerm %>"
+                    <% } else { %>
+                        No todos yet. Add your first todo above!
+                    <% } %>
+                </div>
+            <% } else { %>
+                <% todos.forEach(function(todo) { %>
+                    <div class="todo-item">
+                        <div class="todo-header">
+                            <div>
+                                <div class="todo-title"><%= todo.title %></div>
+                                <div class="todo-date">Created: <%= new Date(todo.created_at).toLocaleString() %></div>
+                            </div>
+                            <form method="POST" action="/delete-todo" class="delete-form">
+                                <input type="hidden" name="id" value="<%= todo.id %>">
+                                <button type="submit" class="delete-button" 
+                                        onclick="return confirm('Are you sure you want to delete this todo?')">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                        <div class="todo-content">
+                            <%= todo.content || 'No content' %>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html> 

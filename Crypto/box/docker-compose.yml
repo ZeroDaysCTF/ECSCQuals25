@@ -1,0 +1,7 @@
+services:
+  box:
+    build:
+      context: .
+    ports:
+      - "2500:2337"
+    restart: unless-stopped

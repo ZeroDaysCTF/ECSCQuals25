@@ -1,0 +1,25 @@
+{
+  "name": "leaky-todo-app",
+  "version": "1.0.0",
+  "description": "A TODO application with user authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "bcryptjs": "^3.0.2",
+    "sqlite3": "^5.1.7",
+    "express-session": "^1.18.1",
+    "connect-sqlite3": "^0.9.16",
+    "ejs": "^3.1.10",
+    "puppeteer": "^24.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["todo", "express", "authentication"],
+  "author": "",
+  "license": "MIT"
+} 

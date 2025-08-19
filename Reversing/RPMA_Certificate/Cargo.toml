@@ -1,0 +1,20 @@
+[package]
+name = "flag_checker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+colored = "2.0"
+
+[[bin]]
+name = "flag_checker"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 1
+debug = false
+strip = true
+lto = false
+
+[profile.dev]
+opt-level = 0

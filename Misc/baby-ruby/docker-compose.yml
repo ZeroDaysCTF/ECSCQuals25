@@ -1,0 +1,7 @@
+services:
+  baby-ruby:
+    build:
+      context: .
+    ports:
+      - "5006:2337"
+    restart: unless-stopped

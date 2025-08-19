@@ -1,0 +1,14 @@
+services:
+  crypto_signature:
+    build: ./challenge
+    ports:
+      - 1337:1337
+    environment:
+      FLAG: ZeroDays{elliptic_nonce}
+    healthcheck:
+      test: ["CMD", "sh", "-c", "nc -z 172.17.0.1 1337 || exit 1"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      start_period: 1s
+    restart: always

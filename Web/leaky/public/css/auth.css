@@ -1,0 +1,22 @@
+body {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.register-button {
+    background: #28a745;
+}
+
+.register-button:hover {
+    background: #218838;
+} 

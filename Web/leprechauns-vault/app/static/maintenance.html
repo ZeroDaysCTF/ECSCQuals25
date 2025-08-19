@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance - Leprechaun's Vault</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #228B22 0%, #32CD32 50%, #228B22 100%);
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="8" fill="rgba(255,255,255,0.1)">🍀</text></svg>');
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 700px;
+            backdrop-filter: blur(10px);
+            border: 3px solid #FFD700;
+            position: relative;
+            z-index: 2;
+        }
+
+        .maintenance-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #228B22;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #8B4513;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .maintenance-message {
+            color: #2F4F2F;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .status-section {
+            background: linear-gradient(135deg, #F0FFF0 0%, #E0F0E0 100%);
+            padding: 1rem;
+            border-radius: 15px;
+            border: 2px solid #90EE90;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .status-section h3 {
+            color: #228B22;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            color: #556B2F;
+        }
+
+        .status-icon {
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #8B4513;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+            border: 3px solid #FFA500;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+            background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+        }
+
+        .footer {
+            margin-top: 1.5rem;
+            color: #8B4513;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .irish-flag {
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            background: linear-gradient(to bottom, #169b62 33%, #ffffff 33% 66%, #ff883e 66%);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="maintenance-icon">🔧</div>
+        <div class="logo">🍀 Leprechaun's Vault 🍀</div>
+        <div class="subtitle">Temporary Maintenance in Progress</div>
+        
+        <div class="maintenance-message">
+            Greetings, treasure seekers! We're currently performing some essential maintenance on our vault creation system. The ancient Celtic spirits are working overtime to ensure everything runs smoothly.
+        </div>
+
+        <div class="status-section">
+            <h3>🔒 Current System Status</h3>
+            <div class="status-item">
+                <span class="status-icon">❌</span>
+                <span><strong>Vault Creation:</strong> Temporarily disabled for maintenance</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">✅</span>
+                <span><strong>Existing Vaults:</strong> Still accessible and secure</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">🔒</span>
+                <span><strong>Vault Items:</strong> Locked due to emergency security measures</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">🛡️</span>
+                <span><strong>Security:</strong> Enhanced protection active - safety first!</span>
+            </div>
+        </div>
+
+        <div class="maintenance-message">
+            <strong>What you can do:</strong> You can still access existing vaults using their unique hash identifiers. Our security team is working diligently to restore full functionality while maintaining the highest standards of protection for your treasures.
+        </div>
+
+        <a href="/" class="back-button">🍀 Return to Home 🍀</a>
+        
+        <div class="footer">
+            <span class="irish-flag"></span>
+            © 2025 Leprechaun's Vault - Safety First! 🛡️
+        </div>
+    </div>
+</body>
+</html> 
